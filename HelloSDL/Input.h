@@ -13,11 +13,10 @@ enum KEYS {
 
 class Input {
 public:
-	void updateInput();
 	bool isKeyDown(int);
-	void setSDLEvent(SDL_Event &e);
+	SDL_Event* getEvents();
 private:
-	SDL_Event* sdlEvents;
+	SDL_Event e;
 };
 
 #endif

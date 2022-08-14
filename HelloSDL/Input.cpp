@@ -1,8 +1,8 @@
 #include "Input.h"
 
 bool Input::isKeyDown(int key) {
-	if (sdlEvents->type == SDL_KEYDOWN) {
-		if (sdlEvents->key.keysym.sym == key) {
+	if (e.type == SDL_KEYDOWN) {
+		if (e.key.keysym.sym == key) {
 			return true;
 		}
 		else {
@@ -14,7 +14,7 @@ bool Input::isKeyDown(int key) {
 	}
 }
 
-void Input::setSDLEvent(SDL_Event &e) {
-	sdlEvents = &e;
+SDL_Event* Input::getEvents(){
+	return &e;
 }
 
