@@ -1,7 +1,7 @@
 #ifndef INPUT_H
 #define INPUT_H
 
-#include <SDL.h>
+#include  "SDL.h"
 
 enum KEYS {
 	KEY_UP = SDLK_UP,
